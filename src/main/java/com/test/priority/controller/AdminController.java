@@ -37,4 +37,11 @@ public class AdminController {
 
     }
 
+    @DeleteMapping("dltareas")
+    private String deleteAreas(@RequestParam("priorityName") String priorityName)
+    {
+        areasRepo.deleteByName(priorityName);
+        return "Success";
+    }
+
 }
